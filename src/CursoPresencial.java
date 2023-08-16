@@ -8,6 +8,10 @@ public class CursoPresencial extends Curso {
         this.horario = horario;
     }
 
+    public String getHorario() {
+        return horario;
+    }
+
     public double calcularAsistenciaPromedio() {
         return 0.0;
     }

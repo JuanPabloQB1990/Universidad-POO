@@ -1,5 +1,5 @@
 
-public class Estudiante extends Persona implements Estaditicas{
+public class Estudiante extends Persona implements Estaditicas {
     private String carnet;
     private double[] notas;
     private int contadorNotas;
@@ -9,7 +9,6 @@ public class Estudiante extends Persona implements Estaditicas{
         this.carnet = carnet;
         this.notas = new double[3];
         this.contadorNotas = 0;
-
     }
 
     public void agregarNota(double nota ){
@@ -17,6 +16,10 @@ public class Estudiante extends Persona implements Estaditicas{
             this.notas[contadorNotas] = nota;
             contadorNotas++;
         }
+    }
+
+    public String getCarnet() {
+        return carnet;
     }
 
     @Override

@@ -11,5 +11,8 @@ public class Persona {
         this.genero = genero;
     }
 
+    public String getDatos() {
+        return "nombre= " + nombre + ", edad= " + edad + ", genero= " + genero;
+    }
 
 }

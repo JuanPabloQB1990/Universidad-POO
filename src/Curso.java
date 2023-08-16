@@ -3,20 +3,35 @@ import java.util.ArrayList;
 public class Curso implements Gestionable {
     private String nombreCurso;
     private Profesor profesor;
-    private ArrayList<Estudiante> estudiantes;
-    private ArrayList<Estudiante> estudiantesParticipantes;
+    public ArrayList<Estudiante> estudiantes;
 
+    // constructor
     public Curso(String nombreCurso, Profesor profesor) {
         this.nombreCurso = nombreCurso;
         this.profesor = profesor;
-        this.estudiantes = estudiantes;
+        this.estudiantes = new ArrayList<>();
     }
-
 
     public void agregarEstudiante(Estudiante alumno) {
         this.estudiantes.add(alumno);
     }
 
+    public int getCantidad(){
+        return this.estudiantes.size();
+    }
+
+    public String getNombreCurso() {
+        return nombreCurso;
+    }
+
+    public String getProfesor(){
+        return this.profesor.getDatos() + " titulo: " + this.profesor.getTitulo();
+    }
+
+    public ArrayList<Estudiante> getEstudiantes(){
+
+        return this.estudiantes;
+    }
 
     @Override
     public void inscripcion(Estudiante alumnoNuevo) {

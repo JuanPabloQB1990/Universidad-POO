@@ -11,8 +11,14 @@ public class Profesor extends Persona {
         this.materias = new ArrayList<>();
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
     public void agregarMaterias(String materia) {
         this.materias.add(materia);
     }
+
+
 
 }
